@@ -18,8 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: vn7n24fzkq/github-profile-summary-cards@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
           BRANCH_NAME: main
           UTC_OFFSET: 8
-          EXCLUDE_REPOS: samlaying
